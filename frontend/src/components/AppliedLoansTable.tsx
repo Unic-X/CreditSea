@@ -26,7 +26,7 @@ const AppliedLoansTable: React.FC = () => {
   useEffect(() => {
     const fetchLoans = async () => {
       try {
-        const response = await axios.get<any[]>('http://localhost:5000/api/loanApplications');
+        const response = await axios.get<any[]>('https://loonix.in:8493/api/loanApplications');
         const fetchedLoans: Loan[] = response.data.map((loan, _) => ({
           id: loan._id,
           user: loan.fullName,
