@@ -3,11 +3,11 @@ import { ArrowUpDown, Filter } from 'lucide-react';
 
 const AppliedLoansTable: React.FC = () => {
   const initialLoans = [
-    { id: 1, activity: 'Contact Email not Linked', customer: 'Tom Cruise', date: 'June 09, 2021', status: 'Pending', image: '/placeholder.svg' },
-    { id: 2, activity: 'Adding Images to Featured Posts', customer: 'Matt Damon', date: 'June 09, 2021', status: 'Pending', image: '/placeholder.svg' },
-    { id: 3, activity: 'When will I be charged this month?', customer: 'Robert Downey', date: 'June 09, 2021', status: 'Pending', image: '/placeholder.svg' },
-    { id: 4, activity: 'Payment not going through', customer: 'Christian Bale', date: 'June 09, 2021', status: 'Viewed', image: '/placeholder.svg' },
-    { id: 5, activity: 'Unable to add replies', customer: 'Henry Cavil', date: 'June 09, 2021', status: 'Viewed', image: '/placeholder.svg' },
+    { id: 1, activity: 'Contact Email not Linked', customer: 'Tom Cruise', date: 'June 09, 2021', status: 'Pending', image: '/images/user1.png' },
+    { id: 2, activity: 'Adding Images to Featured Posts', customer: 'Matt Damon', date: 'June 09, 2021', status: 'Pending', image: '/images/user2.png' },
+    { id: 3, activity: 'When will I be charged this month?', customer: 'Robert Downey', date: 'June 09, 2021', status: 'Pending', image: '/images/user3.png' },
+    { id: 4, activity: 'Payment not going through', customer: 'Christian Bale', date: 'June 09, 2021', status: 'Viewed', image: '/images/user4.png' },
+    { id: 5, activity: 'Unable to add replies', customer: 'Henry Cavil', date: 'June 09, 2021', status: 'Viewed', image: '/images/user5.png' },
   ];
 
   const [loans, setLoans] = useState(initialLoans);

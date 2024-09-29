@@ -29,10 +29,10 @@ const SearchBar = () => (
 
 const AppliedLoansTable = () => {
   const loans = [
-    { id: 1, officer: "John Okoh", amount: 50000.00, date: "June 09, 2021", status: "Pending" },
-    { id: 2, officer: "John Okoh", amount: 100000.00, date: "June 07, 2021", status: "Verified" },
-    { id: 3, officer: "John Okoh", amount: 100000.00, date: "June 07, 2021", status: "Rejected" },
-    { id: 4, officer: "John Okoh", amount: 100000.00, date: "May 27, 2021", status: "Approved" },
+    { id: 1, officer: "John Okoh", amount: 50000.00, date: "June 09, 2021", status: "Pending" ,image:"/images/user1.png"},
+    { id: 2, officer: "John Okoh", amount: 100000.00, date: "June 07, 2021", status: "Verified" ,image:"/images/user1.png"},
+    { id: 3, officer: "John Okoh", amount: 100000.00, date: "June 07, 2021", status: "Rejected"  ,image:"/images/user1.png"},
+    { id: 4, officer: "John Okoh", amount: 100000.00, date: "May 27, 2021", status: "Approved"  ,image:"/images/user1.png"},
   ]
 
   return (
@@ -59,7 +59,7 @@ const AppliedLoansTable = () => {
             <tr key={loan.id} className="border-b">
               <td className="p-3">
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-gray-300 rounded-full mr-2"></div>
+                    <img className="h-8 w-8 rounded-full mr-2" src={loan.image} alt="" />
                   {loan.officer}
                 </div>
               </td>

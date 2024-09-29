@@ -11,11 +11,11 @@ import StatCard from '../components/StatCard';
 // RecentLoans component
 const RecentLoans: React.FC = () => {
   const loans = [
-    { id: 1, user: 'Tom Cruise', details: 'Contact Email not Linked', date: 'June 09, 2021', status: 'Pending',  image: '/placeholder.svg'  },
-    { id: 2, user: 'Matt Damon', details: 'Adding Images to Featured Posts', date: 'June 09, 2021', status: 'Pending',  image: '/placeholder.svg'  },
-    { id: 3, user: 'Robert Downey', details: 'When will I be charged this month?', date: 'June 09, 2021', status: 'Pending' ,  image: '/placeholder.svg' },
-    { id: 4, user: 'Christian Bale', details: 'Payment not going through', date: 'June 09, 2021', status: 'Approved',  image: '/placeholder.svg' },
-    { id: 5, user: 'Henry Cavil', details: 'Unable to add replies', date: 'June 09, 2021', status: 'Approved',  image: '/placeholder.svg'  },
+    { id: 1, user: 'Tom Cruise', details: 'Contact Email not Linked', date: 'June 09, 2021', status: 'Pending',  image: '/images/user1.png'  },
+    { id: 2, user: 'Matt Damon', details: 'Adding Images to Featured Posts', date: 'June 09, 2021', status: 'Pending',  image: '/images/user2.png'  },
+    { id: 3, user: 'Robert Downey', details: 'When will I be charged this month?', date: 'June 09, 2021', status: 'Pending' ,  image: '/images/user3.png'},
+    { id: 4, user: 'Christian Bale', details: 'Payment not going through', date: 'June 09, 2021', status: 'Approved',  image: '/images/user4.png' },
+    { id: 5, user: 'Henry Cavil', details: 'Unable to add replies', date: 'June 09, 2021', status: 'Approved',  image: '/images/user5.png'  },
   ];
 
   return (
