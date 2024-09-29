@@ -44,7 +44,7 @@ const AppliedLoansTable: React.FC = () => {
             className="inline-flex items-center px-3 py-1 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             onClick={handleSort}
           >
-            <ArrowUpDown size={16} className="mr-1" /> Sort by Customer
+            <ArrowUpDown size={16} className="mr-1" /> Sort
           </button>
           <button
             className="inline-flex items-center px-3 py-1 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -52,7 +52,7 @@ const AppliedLoansTable: React.FC = () => {
               handleFilter(filterStatus === 'Pending' ? null : 'Pending')
             }
           >
-            <Filter size={16} className="mr-1" /> {filterStatus === 'Pending' ? 'Clear Filter' : 'Filter Pending'}
+            <Filter size={16} className="mr-1" /> Filter
           </button>
         </div>
       </div>
