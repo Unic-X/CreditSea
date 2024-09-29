@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar';
 import StatCard from '../components/StatCard';
 import AppliedLoansTable from '../components/AppliedLoansTable';
 import { LoansReleasedChart, OutstandingLoansChart, RepaymentsCollectedChart } from '../components/Chart'
-import { PiggyBank, User, DollarSign, CreditCard, Wallet } from 'lucide-react';
+import { PiggyBank, User, DollarSign, CreditCard, Wallet, Users } from 'lucide-react';
 
 const Dashboard: React.FC = () => {
  const loansReleasedData = [
@@ -61,39 +61,14 @@ const Dashboard: React.FC = () => {
           <div className="container mx-auto px-6 py-8">
             <h3 className="text-gray-700 text-3xl font-medium">Dashboard {'>'} Loans</h3>
             <div className="mt-4">
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-                <StatCard
-                  title="LOANS"
-                  value="50"
-                  icon={<DollarSign className="w-10 h-10 text-green-700" />}
-                />
-                <StatCard
-                  title="BORROWERS"
-                  value="100"
-                  icon={<User className="w-10 h-10 text-green-700" />}
-                />
-                <StatCard
-                  title="CASH DISBURSED"
-                  value="550,000"
-                  icon={<CreditCard className="w-10 h-10 text-green-700" />}
-                />
-                <StatCard
-                  title="SAVINGS"
-                  value="450,000"
-                  icon={<PiggyBank className="w-10 h-10 text-green-700" />}
-                />
-                <StatCard
-                  title="REPAID LOANS"
-                  value="30"
-                  icon={<User className="w-10 h-10 text-green-700" />}
-                />
-                <StatCard
-                  title="CASH RECEIVED"
-                  value="1,000,000"
-                  icon={<Wallet className="w-10 h-10 text-green-700" />}
-                />
-              </div>
-            </div>
+             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <StatCard icon={<Users size={24} className="text-white" />} title="LOANS" value="50" />
+                <StatCard icon={<Users size={24} className="text-white" />} title="BORROWERS" value="100" />
+                <StatCard icon={<DollarSign size={24} className="text-white" />} title="CASH DISBURSED" value="550,000" />
+                <StatCard icon={<PiggyBank size={24} className="text-white" />} title="SAVINGS" value="450,000" />
+                <StatCard icon={<Wallet size={24} className="text-white" />} title="REPAID LOANS" value="30" />
+                <StatCard icon={<Wallet size={24} className="text-white" />} title="CASH RECEIVED" value="1,000,000" />
+              </div>            </div>
             <div className="mt-8">
               <AppliedLoansTable />
             </div>
