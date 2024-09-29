@@ -1,10 +1,13 @@
-const express = require('express');
-const router = express.Router();
+import { Router, Request, Response } from 'express';
+import { Db } from 'mongodb';
+
+const router = Router();
 
 // Get all loan applications
-router.get('/loanApplications', async (req, res) => {
+router.get('/loanApplications', async (req: Request, res: Response) => {
   try {
-    const loanApplications = await req.db.collection('details').find().toArray();
+    const db = req.db as Db; // Use type assertion here
+    const loanApplications = await db.collection('details').find().toArray();
     res.json(loanApplications);
   } catch (err) {
     console.error('Failed to fetch loan applications:', err);
@@ -13,9 +16,7 @@ router.get('/loanApplications', async (req, res) => {
 });
 
 // Submit a loan application
-
-router.post('/loanApplications', async (req, res) => {
-
+router.post('/loanApplications', async (req: Request, res: Response) => {
   const newApplication = {
     fullName: req.body.fullName,
     loanAmount: req.body.loanAmount,
@@ -28,7 +29,8 @@ router.post('/loanApplications', async (req, res) => {
   };
 
   try {
-    await req.db.collection('details').insertOne(newApplication);
+    const db = req.db as Db; // Use type assertion here
+    await db.collection('details').insertOne(newApplication);
     res.status(201).json({ message: 'Loan application submitted successfully!' });
   } catch (err) {
     console.error('Failed to submit loan application:', err);
@@ -36,5 +38,5 @@ router.post('/loanApplications', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
 

@@ -100,7 +100,7 @@ const RecentLoans: React.FC = () => {
         <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
           <div>
             <p className="text-sm text-gray-700">
-              Showing <span className="font-medium">1</span> to <span className="font-medium">5</span> of <span className="font-medium">97</span> results
+              Showing <span className="font-medium">1</span> to <span className="font-medium">{loans.length}</span> of <span className="font-medium">97</span> results
             </p>
           </div>
           <div>
