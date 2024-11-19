@@ -1,7 +1,10 @@
 services:
   server:
+
     build:
       context: ./backend/
+    image: armanloonix/credit-sea:latest
+
     ports:
       - "5000:5000"
 
