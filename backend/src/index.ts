@@ -2,6 +2,9 @@ import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import { MongoClient, ServerApiVersion, Db } from 'mongodb';
 import loanApplications from './routes/loanApplicants';
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 const app = express();
 
@@ -9,10 +12,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const uri: string = "mongodb+srv://users:OIDMPzgYCRuExHFb@credit-sea.mlxiv.mongodb.net/?retryWrites=true&w=majority&appName=Credit-Sea";
 
 let db: Db | undefined;
 let client: MongoClient | undefined; // Store client separately
+
+const uri = process.env.MONGO_URI || '';
+
 
 async function connectMongoDB(): Promise<void> {
   client = new MongoClient(uri, {
