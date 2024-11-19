@@ -8,8 +8,6 @@ RUN npm install
 
 COPY . .
 
-COPY .env /usr/src/app
-
 RUN npx tsc
 
 FROM node:lts-slim
