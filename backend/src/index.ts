@@ -18,8 +18,6 @@ let client: MongoClient | undefined; // Store client separately
 
 const uri = process.env.MONGO_URI || '';
 
-console.log("URI YAHA PE HAI" + uri)
-
 async function connectMongoDB(): Promise<void> {
   client = new MongoClient(uri, {
     serverApi: {

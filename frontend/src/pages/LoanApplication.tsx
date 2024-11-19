@@ -27,7 +27,7 @@ const LoanApplication: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await axios.post('https://loonix.in:8493/api/loanApplications', formData);
+      const response = await axios.post('https://loonix.in/api/loanApplications', formData);
       alert('Form submitted successfully!');
       console.log(response.data);
     } catch (error) {
