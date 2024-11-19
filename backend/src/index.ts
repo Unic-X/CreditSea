@@ -2,8 +2,8 @@ import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import { MongoClient, ServerApiVersion, Db } from 'mongodb';
 import loanApplications from './routes/loanApplicants';
-import dotenv from 'dotenv';
-dotenv.config();
+require('dotenv').config()
+
 
 
 const app = express();
@@ -18,6 +18,7 @@ let client: MongoClient | undefined; // Store client separately
 
 const uri = process.env.MONGO_URI || '';
 
+console.log("URI YAHA PE HAI" + uri)
 
 async function connectMongoDB(): Promise<void> {
   client = new MongoClient(uri, {
