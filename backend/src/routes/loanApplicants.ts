@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
 import { Db } from 'mongodb';
-
+//Dummy commit
 const router = Router();
 
 // Get all loan applications
